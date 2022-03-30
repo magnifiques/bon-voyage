@@ -1,5 +1,6 @@
 :root {
-  --color-primary: red;
+  --color-primary: #ff0000;
+  --color-primary-red-light: #e61515;
   --color-primary-light: #667eea;
   --color-primary-dark: #764ba2;
   --color-grey-light-1: #faf9f9;
@@ -133,9 +134,52 @@ body {
   margin-right: 1.5rem;
 }
 
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+}
+.side-nav__item {
+  position: relative;
+}
+.side-nav__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background-color: var(--color-primary);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+}
+.side-nav__item:hover::before, .side-nav__item--active::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.side-nav__item:active::before {
+  background-color: var(--color-primary-red-light);
+}
+.side-nav__link:link, .side-nav__link:visited {
+  color: var(--color-grey-light-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 2rem 3rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
+  margin-right: 2rem;
+  fill: currentColor;
 }
 
 .legal {
