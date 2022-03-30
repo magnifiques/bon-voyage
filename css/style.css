@@ -38,6 +38,68 @@ body {
   min-height: 100vh;
 }
 
+.logo {
+  height: 3.25rem;
+  background-color: rebeccapurple;
+}
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__input {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  background-color: var(--color-grey-light-2);
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  transition: all 0.2s ease;
+  margin-right: -3.25rem;
+}
+.search__input:focus {
+  width: 100%;
+  outline: none;
+  background-color: var(--color-grey-light-3);
+}
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: var(--color-grey-light-4);
+}
+.search__input:focus + .search__button {
+  background-color: var(--color-grey-light-3);
+}
+.search__button {
+  background-color: var(--color-grey-light-2);
+  border: none;
+}
+.search__button:focus {
+  outline: none;
+}
+.search__button:active {
+  transform: translateY(2px);
+}
+.search__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: var(--color-grey-dark-3);
+}
+
+.user-nav {
+  background-color: darkorange;
+}
+.user-nav__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.user-nav__user-photo {
+  height: 3.75rem;
+  border-radius: 50%;
+}
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -50,6 +112,10 @@ body {
   height: 7rem;
   background-color: white;
   border-bottom: var(--color-grey-light-2);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content {
