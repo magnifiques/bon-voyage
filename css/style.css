@@ -133,6 +133,18 @@ body {
   margin-right: 1.5rem;
 }
 
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.legal {
+  color: var(--color-grey-light-4);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -158,6 +170,10 @@ body {
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
+  height: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {

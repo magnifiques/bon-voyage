@@ -115,3 +115,30 @@
         margin-right: 1.5rem;
     }
 }
+
+//! Side Navigation
+
+.side-nav {
+
+    &__item {
+
+    }
+
+    &__link {
+
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+//* Legal Information
+
+.legal {
+    color: var(--color-grey-light-4);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+}
