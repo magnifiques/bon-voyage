@@ -297,3 +297,71 @@
         box-shadow: none;
     }
 }
+
+//* Paragraph
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+//? List
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: 0.7rem;
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+
+        //Older Browser
+        // background-image: url('../img/SVG/chevron-small-right.svg');
+        
+        //*Newer Browser
+        background-color: var(--color-primary-red-light);
+        -webkit-mask-image: url('../img/SVG/chevron-small-right.svg');
+        -webkit-mask-size: cover;
+
+        mask-image: url('../img/SVG/chevron-small-right.svg');
+        mask-size: cover;
+    }
+}
+
+//!recommend 
+
+.recommend {
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-2);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+        margin-right: auto;
+    }
+    &__photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
+    }
+}
