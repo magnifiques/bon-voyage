@@ -386,6 +386,58 @@ body {
   z-index: 1;
 }
 
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.cta__book-now {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-red-light));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+}
+.btn__visible {
+  padding: 1rem 2.5rem;
+}
+.btn__invisible {
+  padding: 1rem 0;
+  position: absolute;
+  left: 0;
+  top: -100%;
+}
+.btn:hover {
+  background-image: linear-gradient(to left, var(--color-primary), var(--color-primary-red-light));
+}
+.btn:hover .btn__visible {
+  transform: translateY(100%);
+}
+.btn:hover .btn__invisible {
+  top: 18%;
+}
+.btn:focus {
+  outline: none;
+  animation: locationState 1s infinite;
+}
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -411,7 +463,6 @@ body {
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
-  height: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -427,6 +478,7 @@ body {
   font-size: 1.4rem;
   padding: 4.5rem;
   background-color: var(--color-grey-light-2);
+  border-bottom: var(--line);
 }
 
 .description {
