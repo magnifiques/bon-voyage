@@ -1,3 +1,5 @@
+@use './variables';
+
 //! Logo 
 
 .logo {
@@ -124,11 +126,24 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: variables.$size-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+
+            @media only screen and (max-width: variables.$size-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: variables.$size-medium) {
+            flex: 1;
         }
     }
 
@@ -170,6 +185,10 @@
         
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: variables.$size-medium) {
+            justify-content: center;
+        }
     }
 
     &__icon {
@@ -187,6 +206,10 @@
     font-size: 1.2rem;
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: variables.$size-medium) {
+        display: none;
+    }
 }
 
 //? Gallery
@@ -361,6 +384,11 @@
     &__count {
         margin-right: auto;
     }
+
+    &__friends {
+        display: flex;
+    }
+
     &__photo {
         box-sizing: content-box;
         height: 4rem;
@@ -384,6 +412,12 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     margin-bottom: 3.5rem;
+    display: flex;
+
+    @media only screen and (max-width: variables.$size-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 3rem;
@@ -443,6 +477,10 @@
     padding: 3.5rem 0;
     text-align: center;
     
+    @media only screen and (max-width: variables.$size-medium) {
+        padding: 2rem 0;
+    }
+
     &__book-now {
         font-size: 1.5rem;
         font-weight: 300;
