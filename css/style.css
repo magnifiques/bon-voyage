@@ -255,6 +255,11 @@ body {
     padding: 1rem 2rem;
   }
 }
+@media only screen and (max-width: 31.25em) {
+  .overview__heading {
+    font-size: 1.2rem;
+  }
+}
 .overview__stars {
   margin-right: auto;
   display: flex;
@@ -264,6 +269,12 @@ body {
   height: 1.75rem;
   fill: var(--color-primary);
 }
+@media only screen and (max-width: 31.25em) {
+  .overview__icon-star, .overview__icon-location {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
 .overview__location {
   font-size: 1.2rem;
   display: flex;
@@ -271,6 +282,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .overview__location {
+    margin-left: 2rem;
     font-size: 1rem;
   }
 }
@@ -287,7 +299,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .overview__rating {
-    padding: 0 1.2rem;
+    padding: 0.4rem 1.6rem;
   }
 }
 .overview__rating-average {
@@ -295,9 +307,15 @@ body {
   font-weight: 300;
   margin-bottom: -3px;
 }
+@media only screen and (max-width: 37.5em) {
+  .overview__rating-average {
+    font-size: 2rem;
+  }
+}
 .overview__rating-count {
   font-size: 1rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .btn-inline {
