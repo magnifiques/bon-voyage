@@ -16,6 +16,12 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: variables.$size-smallest) {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2);
+    }
+
     &__input {
         font-size: inherit;
         font-family: inherit;
@@ -237,6 +243,11 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: variables.$size-small) {
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+        }
     }
 
     &__stars {
@@ -249,12 +260,18 @@
         width: 1.75rem;
         height: 1.75rem;
         fill: var(--color-primary);
+
+        
     }
 
     &__location {
         font-size: 1.2rem;
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: variables.$size-small) {
+            font-size: 1rem;
+        }
     }
 
     &__rating {
@@ -267,6 +284,10 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media only screen and (max-width: variables.$size-small) {
+            padding: 0 1.2rem;
+        }
     }
 
     &__rating-average {
@@ -348,9 +369,14 @@
     display: flex;
     flex-wrap: wrap;
 
+    // @media only screen and (max-width: variables.$size-smallest) {
+    //     font-size: 1.5rem;
+    // }
+
     &__item {
         flex: 0 0 50%;
         margin-bottom: 0.7rem;
+        display: flex;
     }
 
     &__item::before {
@@ -412,12 +438,11 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     margin-bottom: 3.5rem;
-    display: flex;
 
-    @media only screen and (max-width: variables.$size-medium) {
-        padding: 2rem;
-        margin-bottom: 3rem;
-    }
+    // @media only screen and (max-width: variables.$size-medium) {
+    //     padding: 2rem;
+    //     margin-bottom: 3rem;
+    // }
 
     &__text {
         margin-bottom: 3rem;

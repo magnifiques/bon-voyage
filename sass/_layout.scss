@@ -15,7 +15,7 @@
     }
 }
 
-.header{
+.header {
     height: 7rem;
     background-color: white;
     border-bottom: var(--line);
@@ -24,6 +24,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: variables.$size-smallest) {
+        flex-wrap: wrap;
+        height: 17rem;
+    }
 }
 
 .content {
@@ -57,6 +62,10 @@
     @media only screen and (max-width: variables.$size-medium) {
         padding: 3rem;
     }
+
+    @media only screen and (max-width: variables.$size-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -70,6 +79,11 @@
     @media only screen and (max-width: variables.$size-medium) {
         padding: 4rem;
         margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: variables.$size-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
     }
 }
 

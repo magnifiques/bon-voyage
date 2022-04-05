@@ -59,6 +59,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 31.25em) {
+  .search {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+}
 .search__input {
   font-size: inherit;
   font-family: inherit;
@@ -242,6 +249,12 @@ body {
   letter-spacing: 1px;
   padding: 1.5rem 3rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .overview__heading {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}
 .overview__stars {
   margin-right: auto;
   display: flex;
@@ -256,6 +269,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .overview__location {
+    font-size: 1rem;
+  }
+}
 .overview__rating {
   background-color: var(--color-primary-red-light);
   color: white;
@@ -266,6 +284,11 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+@media only screen and (max-width: 37.5em) {
+  .overview__rating {
+    padding: 0 1.2rem;
+  }
 }
 .overview__rating-average {
   font-size: 2.25rem;
@@ -333,6 +356,7 @@ body {
 .list__item {
   flex: 0 0 50%;
   margin-bottom: 0.7rem;
+  display: flex;
 }
 .list__item::before {
   content: "";
@@ -375,13 +399,6 @@ body {
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
-  display: flex;
-}
-@media only screen and (max-width: 56.25em) {
-  .review {
-    padding: 2rem;
-    margin-bottom: 3rem;
-  }
 }
 .review__text {
   margin-bottom: 3rem;
@@ -508,6 +525,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 31.25em) {
+  .header {
+    flex-wrap: wrap;
+    height: 17rem;
+  }
+}
 
 .content {
   display: flex;
@@ -543,6 +566,11 @@ body {
     padding: 3rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .detail {
+    flex-direction: column;
+  }
+}
 
 .description {
   flex: 0 0 60%;
@@ -556,6 +584,12 @@ body {
   .description {
     padding: 4rem;
     margin-right: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .description {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
